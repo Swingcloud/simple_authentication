@@ -17,6 +17,10 @@ config :auth_ex, AuthExWeb.Endpoint,
   pubsub: [name: AuthEx.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+config :auth_ex, AuthEx.Auth.Guardian,
+  issuser: "auth_ex",
+  secret_key: "mWDNrxfadfMjSY5Ut4OXKcsth9mSJjs6cggkEDXrhoDhMjN37MTIMviw8sCXFkXS"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
